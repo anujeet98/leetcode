@@ -1,0 +1,24 @@
+class Solution {
+public:
+    vector<int> replaceElements(vector<int>& arr) {
+        int maxptr=0;
+        for(int i=0;i<arr.size();i++)
+        {
+            if(i>=maxptr)
+            {
+                int max=0;
+                for(int j=arr.size()-1;j>i;j--)
+                {
+                    if(arr[j]>max)
+                    {
+                        max=arr[j];
+                        maxptr=j;
+                    }
+                }
+            }
+            arr[i]=arr[maxptr];
+        }
+        arr[arr.size()-1]=-1;
+        return arr;
+    }
+};
