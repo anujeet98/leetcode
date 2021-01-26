@@ -1,3 +1,5 @@
+prob link: https://leetcode.com/problems/queries-on-a-permutation-with-key/
+
 class Solution {
 public:
     vector<int> processQueries(vector<int>& queries, int m) {
